@@ -31,7 +31,7 @@ const Showjobs = () => {
         <div>
             <div className="search">
 
-            <input type="text" onChange={(e)=>SetSearch(e.target.value)} />
+            <input type="text" onChange={(e)=>SetSearch(e.target.value)} placeholder="search location" />
             <button onClick={searchData}>Search</button>
             </div>
 
@@ -40,7 +40,7 @@ const Showjobs = () => {
                 <div style={{display:"grid",gridTemplateColumns:"50%",border:"1px solid black",
                 width:"50%",margin:"auto","marginTop":"100px",fontFamily:"sans-serif",fontSize:"20px"
                 }}>
-                <p > title:{value.title}</p>
+                <p>title:{value.title}</p>
                 <p>description:{value.description}</p>
                 <p>external:{value.external}</p>
                 <p>level:{value.level}</p>
