@@ -3,6 +3,7 @@ import axios from "axios"
 
 const Showjobs = () => {
     const[jobs,setJobs]=useState([])
+    const[search,SetSearch]=useState("")
     console.log(jobs);
     const get=async()=>{
         try{
@@ -16,14 +17,22 @@ const Showjobs = () => {
     useEffect(() => {
        get()
     }, [])
+
+    const searchData=()=>{
+        const filterData=jobs.filter((e)=>{
+        return e.location.toLowerCase().includes(search.toLowerCase())    
+        })
+        setJobs(filterData)
+
+    }
    
     return (
         <>
         <div>
             <div className="search">
 
-            <input type="text" />
-            <button>Search</button>
+            <input type="text" onChange={(e)=>SetSearch(e.target.value)} />
+            <button onClick={searchData}>Search</button>
             </div>
 
             {jobs.map((value)=>{
@@ -35,7 +44,7 @@ const Showjobs = () => {
                 <p>{value.level}</p>
                 <p>{value.publicatiob_date}</p>
                 <p>{value.location}</p>
-                </div>
+             </div>
                 )
                 })
             }

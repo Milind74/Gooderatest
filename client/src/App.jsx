@@ -5,7 +5,6 @@ import Showjobs from './component/Showjobs';
 function App() {
   return (
     <div className="App">
-      milind
      <Showjobs/>
     </div>
   );
