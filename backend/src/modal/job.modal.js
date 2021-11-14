@@ -18,7 +18,7 @@ const jobSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    publication_data: {
+    publication_date: {
         type: String,
         required: true
     },
@@ -30,14 +30,14 @@ const jobSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tags: {
-        type: Array,
-        required: false
-    },
-    company: {
-        type: Object,
-        required: false
-    },
+    // tags: {
+    //     type: Array,
+    //     required: false
+    // },
+    // company: {
+    //     type: Object,
+    //     required: false
+    // },
 
 }, {
     versionKey: false,
