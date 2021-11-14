@@ -1,5 +1,7 @@
 const express=require("express");
 const connect=require("./config/db");
+const jobcontroller=require("./controller/job.controller")
+
 const app=express()
 const cors=require("cors")
 
