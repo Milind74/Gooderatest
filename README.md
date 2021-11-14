@@ -18,7 +18,7 @@ npm start
 
 
 
-to run backend:-npm run server
+to run backend:
 
 
 
